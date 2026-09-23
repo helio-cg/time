@@ -1,0 +1,22 @@
+{
+  "name": "racha-times",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Montar Times offline-first para Cloudflare Workers + D1 + PWA",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute racha-times-db --local --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute racha-times-db --remote --file=./schema.sql",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.5",
+    "wrangler": "^4.0.0"
+  }
+}
